@@ -85,3 +85,14 @@ holdButton.addEventListener('click', function () {
     }
 
 })
+
+newGameButton.addEventListener('click', function () {
+    dice.classList.add('hidden');
+    document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
+    changeToZero(score0, score1);
+    p1con.classList.add('player--active');
+    p2con.classList.remove('player--active');
+    playing = true;
+    document.getElementById('current--1').textContent = 0;
+    document.getElementById('current--0').textContent = 0;
+})
